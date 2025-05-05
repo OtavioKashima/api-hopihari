@@ -1,4 +1,6 @@
 const mysql = require('../mysql');
+const bcrypt = require('bcryptjs');
+const { verify} = require("crypto")
 
 exports.atualizarUsuario = async (req, res) => {
     try {
@@ -7,14 +9,20 @@ exports.atualizarUsuario = async (req, res) => {
         const resultado = await mysql.execute(
 
             `update users 
-            set name		= ?,
-	        email		= ?,
-	        password	= ?
+            set first_name = ?,
+            last_name = ?, 
+            email = ?, 
+            password = ?, 
+            birth_date = ?, 
+            phone	= ?,
              where id = ?;`,
             [
-                req.body.name,
+                req.body.first_name,
+                req.body.last_name,
                 req.body.email,
-                req.body.password,
+                senhaCriptografada,
+                req.body.birth_date,
+                req.body.phone,
                 idUsuarios
             ]
 
@@ -29,13 +37,16 @@ exports.atualizarUsuario = async (req, res) => {
 
 exports.cadastrarUsuario = async (req, res) => {
     try {
-
+        const senhaCriptografada = await bcrypt.hash(req.body.password, 10);
         const resultado = await mysql.execute(
-            `insert into users (name, email, password) values(?, ?, ?)`,
+            `insert into users (first_name, last_name, email, password, birth_date, phone) values(?, ?, ?, ?, ?, ?)`,
             [
-                req.body.name,
+                req.body.first_name,
+                req.body.last_name,
                 req.body.email,
-                req.body.password
+                senhaCriptografada,
+                req.body.birth_date,
+                req.body.phone
             ]
         );
         return res.status(201).send({ "mensagem": "Usuario criado com sucesso!"});
