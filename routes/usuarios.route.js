@@ -6,6 +6,7 @@ router.delete('/:id', usuariosController.deletarUsuario);
 
 router.post('/cadastrar', usuariosController.cadastrarUsuario);
 
-router.put('/:id', usuariosController.atualizarUsuario);
+router.put('/:id', usuariosController.atualizarUsuario)
 
+router.post('/login', usuariosController.loginUsuario)
 module.exports = router;
