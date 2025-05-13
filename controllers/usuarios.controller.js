@@ -30,7 +30,7 @@ exports.atualizarUsuario = async (req, res) => {
         return res.status(201).send({ "mensagem": "Usuario atualizado com sucesso!" });
 
     } catch (error) {
-        return res.status(500).send({ "mensagem": error });
+        return res.status(500).send({ error });
 
     }
 }
@@ -52,7 +52,7 @@ exports.cadastrarUsuario = async (req, res) => {
         return res.status(201).send({ "mensagem": "Usuario criado com sucesso!" });
 
     } catch (error) {
-        return res.status(500).send({ "mensagem": error });
+        return res.status(500).send({ error });
     }
 }
 
@@ -68,7 +68,7 @@ exports.deletarUsuario = async (req, res) => {
         );
         return res.status(201).send({ "mensagem": "Usuario deletado com sucesso!" });
     } catch (error) {
-        return res.status(500).send({ "mensagem": error });
+        return res.status(500).send({ error });
     }
 }
 
@@ -101,6 +101,6 @@ exports.loginUsuario = async (req, res) => {
         })
 
     } catch (error) {
-        res.status(500).send({ "Error": error });
+        res.status(500).send({ error });
     }
 }
