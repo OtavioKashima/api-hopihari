@@ -9,4 +9,6 @@ router.get("/",
     notificationController.getNotification
 );
 
+router.put("/:idnotification", notificationController.updateNot);
+
 module.exports = router;
