@@ -3,7 +3,7 @@ const router = express.Router();
 const login = require('../middleware/usuarios.middleware');
 const filasController = require('../controllers/filas.controller');
 
-router.post("/:idRide",
+router.post("/:idRides",
     login.required,
     filasController.verificarBrinquedo,
     filasController.entrarFila
