@@ -13,7 +13,7 @@ DELIMITER $$
 			FROM rides
             WHERE id = NEW.rides_id;
 
-		SELECT count(*) INTO line_count
+		SELECT count(users_id) INTO line_count
         FROM hopi_hari_db.users_has_rides
         WHERE Rides_id = NEW.Rides_id;
         
