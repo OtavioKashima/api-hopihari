@@ -93,7 +93,8 @@ exports.loginUsuario = async (req, res) => {
             last_name: usuario[0].last_name,
             email: usuario[0].email,
             birth_date: usuario[0].birth_date,
-            phone: usuario[0].phone
+            phone: usuario[0].phone,
+            admin: usuario[0].admin
         }, 'senhajwt');
         return res.status(200).send({
             "mensagem": "Usuario logado com sucesso!",
@@ -104,3 +105,14 @@ exports.loginUsuario = async (req, res) => {
         res.status(500).send({ error });
     }
 }
+
+exports.admin = async (req, res, next) => {
+    try{
+        if(!res.locals.admin){
+            return res.status(401).send({ "mensagem": "Usuario não autorizado" });
+        }
+        next();
+    }catch(error){
+        return res.status(401).send(error);
+    }
+ }
