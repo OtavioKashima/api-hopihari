@@ -53,6 +53,15 @@ insert into notification (description, users_id, rides_id, status)
 values (concat(total_wait_time, "minutos de espera para o brinquedo"), 15, 6, true);
 
 ----------------------------------------------------------------------------------------------------------------------
+
+  INSERT INTO areas (name) VALUES 
+("Aribabiba"),
+("Mistieri"),
+("Infantasia"),
+("Kaminda-Mundi"),
+("Wild-West");
+  ------------------------------------------------------------------------------------------------------------
+  
 INSERT INTO rides (name, waiting_time, status, areas_id) VALUES
    ("Hadikali", 15, "Normal", (SELECT id FROM areas WHERE name = "Aribabiba")),
   ("Vambatê", 5, "Movimentado", (SELECT id FROM areas WHERE name = "Aribabiba")),
@@ -94,10 +103,3 @@ INSERT INTO rides (name, waiting_time, status, areas_id) VALUES
   ("Theatro di Kaminda", 6, "Normal", (SELECT id FROM areas WHERE name = "Kaminda-Mundi")),
   ("Le Voyage", 7, "Movimentado", (SELECT id FROM areas WHERE name = "Kaminda-Mundi"));
   
-  ------------------------------------------------------------------------------------------------------------
-  INSERT INTO areas (name) VALUES 
-("Aribabiba"),
-("Mistieri"),
-("Infantasia"),
-("Kaminda-Mundi"),
-("Wild-West");
