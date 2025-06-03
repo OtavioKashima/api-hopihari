@@ -15,6 +15,7 @@ exports.getNotification = async (req, res) => {
             error: 'Erro ao recuperar notificações',
             details: error.message
         });
+        
     }
 };
 
