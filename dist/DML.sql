@@ -137,6 +137,6 @@ update rides set image = "tiro.jpg" where name = "Tirolesa";
 update rides set image = "giranda.jpg" where name = "Giranda Mundi";
 update rides set image = "jogaki.jpg" where name = "Jogakí di Kaminda";
 update rides set image = "theatro.jpg" where name = "Theatro di Kaminda";
-update rides set image = "torre.jpg" where name = "Le Voyage";
+update rides set image = "torre.png" where name = "Le Voyage";
 update rides set image = "katapul.jpg" where name = "Katapul";
 update rides set image = "hadikali.jpg" where name = "Hadikali";
