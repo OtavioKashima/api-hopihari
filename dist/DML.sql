@@ -102,4 +102,41 @@ INSERT INTO rides (name, waiting_time, status, areas_id) VALUES
   ("Jogakí di Kaminda", 6, "Normal", (SELECT id FROM areas WHERE name = "Kaminda-Mundi")),
   ("Theatro di Kaminda", 6, "Normal", (SELECT id FROM areas WHERE name = "Kaminda-Mundi")),
   ("Le Voyage", 7, "Movimentado", (SELECT id FROM areas WHERE name = "Kaminda-Mundi"));
-  
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------
+  UPDATE rides SET image = "vambate.jpg" WHERE name = "Vambatê";
+update rides set image = "jambalaia.jpg" where name = "Jambalaia";
+update rides set image = "parangole.jpg" where name = "Parangolé";
+update rides set image = "aribabobi.jpg" where name = "Aribabobi";
+update rides set image = "cinemotion.jpg" where name = "Cinemotion";
+update rides set image = "speedi.jpg" where name = "SPEEDI ´64";
+update rides set image = "montezum.jpg" where name = "Montezum";
+update rides set image = "vurang.jpg" where name = "Vurang";
+update rides set image = "ekatomb.jpg" where name = "Ekatomb";
+update rides set image = "simulakron.jpg" where name = "Simulákron";
+update rides set image = "vula.jpg" where name = "Vulaviking";
+update rides set image = "katakumb.jpg" where name = "Katakumb";
+update rides set image = "kastel.jpg" where name = "Kastel di Lendas";
+update rides set image = "girapoco.jpg" where name = "Giranda Pokotó";
+update rides set image = "toca.avif" where name = "Tuca do Ugo";
+update rides set image = "buga.jpg" where name = "Bugabalum";
+update rides set image = "astronavi.jpg" where name = "Astronavi";
+update rides set image = "komboio.jpg" where name = "Komboio";
+update rides set image = "giralata.webp" where name = "Giralata";
+update rides set image = "dispenkito.jpg" where name = "Dispenkito";
+update rides set image = "klap.jpg" where name = "Klapi Klapi";
+update rides set image = "rio.jpg" where name = "Rio Bravo";
+update rides set image = "evo.jpg" where name = "Evolution";
+update rides set image = "bravo.jpg" where name = "Bravo Bull";
+update rides set image = "ghosti.jpg" where name = "Ghosti Hotel";
+update rides set image = "vamvo.jpg" where name = "Vamvolari";
+update rides set image = "lamina.jpg" where name = "La Mina del Joe Sacramento";
+update rides set image = "namuskita.jpg" where name = "Namuskita";
+update rides set image = "spleshi.jpg" where name = "Spleshi";
+update rides set image = "tiro.jpg" where name = "Tirolesa";
+update rides set image = "giranda.jpg" where name = "Giranda Mundi";
+update rides set image = "jogaki.jpg" where name = "Jogakí di Kaminda";
+update rides set image = "theatro.jpg" where name = "Theatro di Kaminda";
+update rides set image = "torre.jpg" where name = "Le Voyage";
+update rides set image = "katapul.jpg" where name = "Katapul";
+update rides set image = "hadikali.jpg" where name = "Hadikali";
